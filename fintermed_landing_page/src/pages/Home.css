@@ -1,0 +1,388 @@
+:root {
+    --brand: #0d6efd;
+    --brand-dark: #0b5ed7;
+    --text-dark: #0f172a;
+    --text-soft: #64748b;
+    --white-soft: rgba(255, 255, 255, 0.72);
+    --border-soft: rgba(255, 255, 255, 0.22);
+    --shadow-soft: 0 20px 60px rgba(2, 6, 23, 0.12);
+}
+
+.home-page {
+    font-family: "Roboto", sans-serif;
+    color: var(--text-dark);
+    background:
+            radial-gradient(circle at top left, rgba(13, 110, 253, 0.18), transparent 30%),
+            radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 28%),
+            linear-gradient(135deg, #f8fbff 0%, #edf4ff 45%, #f5f8ff 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page h4,
+.home-page .sitename {
+    font-family: "Montserrat", sans-serif;
+}
+
+.home-page .bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+}
+
+.home-page .bg-orb.one {
+    width: 320px;
+    height: 320px;
+    background: rgba(13, 110, 253, 0.2);
+    top: 80px;
+    left: -80px;
+}
+
+.home-page .bg-orb.two {
+    width: 300px;
+    height: 300px;
+    background: rgba(59, 130, 246, 0.16);
+    right: -60px;
+    top: 180px;
+}
+
+.home-page .bg-orb.three {
+    width: 240px;
+    height: 240px;
+    background: rgba(147, 197, 253, 0.25);
+    bottom: 40px;
+    left: 18%;
+}
+
+.home-page .header {
+    position: relative;
+    z-index: 20;
+}
+
+.home-page .header .branding {
+    min-height: 88px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.home-page .header .logo {
+    text-decoration: none;
+}
+
+.home-page .header .logo img {
+    max-height: none !important;
+    height: 60px !important;
+    width: auto;
+    margin-right: 12px;
+}
+
+.home-page .header .logo .sitename {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: var(--text-dark);
+}
+
+.home-page .selector-hero {
+    position: relative;
+    z-index: 5;
+    min-height: calc(100vh - 88px);
+    display: flex;
+    align-items: center;
+    padding: 72px 0 88px;
+}
+
+.home-page .selector-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--brand-dark);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.08);
+}
+
+.home-page .selector-heading {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto 48px;
+}
+
+.home-page .selector-heading h1 {
+    font-size: 56px;
+    line-height: 1.08;
+    margin-bottom: 18px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0b1220;
+}
+
+.home-page .selector-heading h1 span {
+    color: var(--brand);
+}
+
+.home-page .selector-heading p {
+    max-width: 820px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--text-soft);
+}
+
+.home-page .selector-grid {
+    position: relative;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.home-page .selector-card {
+    position: relative;
+    height: 100%;
+    padding: 34px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--border-soft);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.home-page .selector-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.07), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.home-page .selector-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 70px rgba(13, 110, 253, 0.15);
+    border-color: rgba(13, 110, 253, 0.22);
+}
+
+.home-page .selector-card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.home-page .selector-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.home-page .selector-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: var(--brand);
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.14), rgba(147, 197, 253, 0.18));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.home-page .selector-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--brand-dark);
+    border: 1px solid rgba(13, 110, 253, 0.12);
+}
+
+.home-page .selector-card h3 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #0b1220;
+}
+
+.home-page .selector-card p {
+    font-size: 16.5px;
+    line-height: 1.7;
+    color: var(--text-soft);
+    margin-bottom: 24px;
+}
+
+.home-page .selector-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+}
+
+.home-page .selector-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: #334155;
+    margin-bottom: 14px;
+}
+
+.home-page .selector-list li i {
+    color: var(--brand);
+    font-size: 18px;
+    margin-top: 1px;
+}
+
+.home-page .selector-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.home-page .selector-btn-primary {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(13, 110, 253, 0.22);
+}
+
+.home-page .selector-btn-primary:hover {
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 16px 30px rgba(13, 110, 253, 0.28);
+}
+
+.home-page .selector-btn-secondary {
+    background: rgba(255, 255, 255, 0.82);
+    color: var(--brand-dark);
+    border: 1px solid rgba(13, 110, 253, 0.14);
+}
+
+.home-page .selector-btn-secondary:hover {
+    background: var(--brand);
+    color: #fff;
+    border-color: var(--brand);
+}
+
+.home-page .selector-divider {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--brand-dark);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 18px 35px rgba(13, 110, 253, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 3;
+}
+
+.home-page .selector-footer-note {
+    text-align: center;
+    margin-top: 26px;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.home-page .footer-simple {
+    position: relative;
+    z-index: 5;
+    padding: 0 0 36px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+@media (max-width: 991px) {
+    .home-page .selector-heading h1 {
+        font-size: 40px;
+    }
+
+    .home-page .selector-heading p {
+        font-size: 17px;
+    }
+
+    .home-page .selector-card {
+        padding: 28px;
+        border-radius: 24px;
+    }
+
+    .home-page .selector-card h3 {
+        font-size: 26px;
+    }
+
+    .home-page .selector-divider {
+        position: static;
+        transform: none;
+        margin: 18px auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-page .selector-hero {
+        padding: 52px 0 70px;
+    }
+
+    .home-page .selector-heading h1 {
+        font-size: 32px;
+    }
+
+    .home-page .selector-heading p {
+        font-size: 16px;
+    }
+
+    .home-page .selector-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 30px;
+    }
+
+    .home-page .selector-card {
+        padding: 24px;
+    }
+
+    .home-page .header .logo img {
+        height: 48px !important;
+    }
+
+    .home-page .header .logo .sitename {
+        font-size: 24px;
+    }
+}
