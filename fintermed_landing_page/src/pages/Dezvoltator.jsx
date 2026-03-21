@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../assets/img/logo.svg";
 import heroBg from "../assets/img/test.png";
+import ContactFormSection from "./ContactFormSection.jsx";
 
 export default function Dezvoltator() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -474,127 +475,39 @@ export default function Dezvoltator() {
                     </div>
                 </section>
 
-                <section id="contact" className="contact section">
-                    <div className="container section-title" data-aos="fade-up">
-                        <h2>Contact</h2>
-                        <p>
-                            <span>Vrei să vezi</span>{" "}
-                            <span className="description-title">cum se aplică pe proiectul tău?</span>
-                        </p>
-                    </div>
-
-                    <div className="container" data-aos="fade-up" data-aos-delay="100">
-                        <div className="row gy-4">
-                            <div className="col-lg-5">
-                                <div className="info-wrap">
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                                        <i className="bi bi-building flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Clienții noștri</h3>
-                                            <p>Dezvoltatori imobiliari și echipe de management de proiect rezidențial</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                                        <i className="bi bi-envelope flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Email</h3>
-                                            <p>contact@fintermed.com</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                                        <i className="bi bi-shield-check flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Obiectiv</h3>
-                                            <p>
-                                                Deblocarea vânzărilor, securizarea fondurilor și predictibilitate
-                                                financiară pe durata șantierului.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-7">
-                                <form className="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                                    <div className="row gy-4">
-                                        <div className="col-md-6">
-                                            <label htmlFor="name-field" className="pb-2">
-                                                Nume
-                                            </label>
-                                            <input type="text" name="name" id="name-field" className="form-control" required />
-                                        </div>
-
-                                        <div className="col-md-6">
-                                            <label htmlFor="email-field" className="pb-2">
-                                                Email
-                                            </label>
-                                            <input
-                                                type="email"
-                                                className="form-control"
-                                                name="email"
-                                                id="email-field"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="company-field" className="pb-2">
-                                                Companie / Proiect
-                                            </label>
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                name="company"
-                                                id="company-field"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="subject-field" className="pb-2">
-                                                Subiect
-                                            </label>
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                name="subject"
-                                                id="subject-field"
-                                                defaultValue="Solicitare demonstrație FINTERMED"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="message-field" className="pb-2">
-                                                Mesaj
-                                            </label>
-                                            <textarea
-                                                className="form-control"
-                                                name="message"
-                                                rows="8"
-                                                id="message-field"
-                                                required
-                                                placeholder="Spune-ne câteva detalii despre proiectul tău și obiectivele de finanțare / vânzare."
-                                            ></textarea>
-                                        </div>
-
-                                        <div className="col-md-12 text-center">
-                                            <div className="loading">Se trimite...</div>
-                                            <div className="error-message"></div>
-                                            <div className="sent-message">
-                                                Mesajul tău a fost trimis. Îți mulțumim!
-                                            </div>
-
-                                            <button type="submit">Solicită demonstrație</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <ContactFormSection
+                    title="Contact"
+                    titlePrefix="Vrei să vezi"
+                    titleHighlight="cum se aplică pe proiectul tău?"
+                    infoItems={[
+                        {
+                            icon: "bi-building",
+                            title: "Clienții noștri",
+                            text: "Dezvoltatori imobiliari și echipe de management de proiect rezidențial",
+                            delay: 200,
+                        },
+                        {
+                            icon: "bi-envelope",
+                            title: "Email",
+                            text: "contact@fintermed.com",
+                            delay: 400,
+                        },
+                        {
+                            icon: "bi-shield-check",
+                            title: "Obiectiv",
+                            text: "Deblocarea vânzărilor, securizarea fondurilor și predictibilitate financiară pe durata șantierului.",
+                            delay: 500,
+                        },
+                    ]}
+                    buttonText="Solicită demonstrație"
+                    successText="Mesajul tău a fost trimis. Îți mulțumim!"
+                    errorText="A apărut o eroare. Te rugăm să încerci din nou."
+                    serviceId= "service_iqa1tay"
+                    templateId="template_7tzk2yg"
+                    publicKey="9rKI7F8Sb1XG3u16T"
+                    subjectDefaultValue="Solicitare demonstrație FINTERMED"
+                    messagePlaceholder="Spune-ne câteva detalii despre proiectul tău și obiectivele de finanțare / vânzare."
+                />
             </main>
 
             <footer id="footer" className="footer">

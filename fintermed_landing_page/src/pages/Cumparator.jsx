@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Logo from "../assets/img/logo.svg";
 import heroBg from "../assets/img/test.png";
+import ContactFormSection from "./ContactFormSection.jsx";
 
 
 export default function Cumparator() {
@@ -460,130 +461,39 @@ export default function Cumparator() {
                     </div>
                 </section>
 
-                <section id="contact" className="contact section">
-                    <div className="container section-title" data-aos="fade-up">
-                        <h2>Contact</h2>
-                        <p>
-                            <span>Vrei să înțelegi</span>{" "}
-                            <span className="description-title">cum îți sunt protejați banii?</span>
-                        </p>
-                    </div>
-
-                    <div className="container" data-aos="fade-up" data-aos-delay="100">
-                        <div className="row gy-4">
-                            <div className="col-lg-5">
-                                <div className="info-wrap">
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                                        <i className="bi bi-person-heart flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Pentru cine este</h3>
-                                            <p>
-                                                Cumpărători care rezervă sau achiziționează locuințe în faza
-                                                de proiect sau în timpul construcției.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                                        <i className="bi bi-envelope flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Email</h3>
-                                            <p>contact@fintermed.com</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                                        <i className="bi bi-shield-check flex-shrink-0"></i>
-                                        <div>
-                                            <h3>Obiectiv</h3>
-                                            <p>
-                                                Să cumperi o locuință cu mai multă încredere, control și
-                                                protecție asupra banilor tăi.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-7">
-                                <form className="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                                    <div className="row gy-4">
-                                        <div className="col-md-6">
-                                            <label htmlFor="name-field" className="pb-2">
-                                                Nume
-                                            </label>
-                                            <input type="text" name="name" id="name-field" className="form-control" required />
-                                        </div>
-
-                                        <div className="col-md-6">
-                                            <label htmlFor="email-field" className="pb-2">
-                                                Email
-                                            </label>
-                                            <input
-                                                type="email"
-                                                className="form-control"
-                                                name="email"
-                                                id="email-field"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="project-field" className="pb-2">
-                                                Proiect rezidențial / Dezvoltator
-                                            </label>
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                name="project"
-                                                id="project-field"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="subject-field" className="pb-2">
-                                                Subiect
-                                            </label>
-                                            <input
-                                                type="text"
-                                                className="form-control"
-                                                name="subject"
-                                                id="subject-field"
-                                                defaultValue="Solicitare informații protecție cumpărător FINTERMED"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <label htmlFor="message-field" className="pb-2">
-                                                Mesaj
-                                            </label>
-                                            <textarea
-                                                className="form-control"
-                                                name="message"
-                                                rows="8"
-                                                id="message-field"
-                                                required
-                                                placeholder="Spune-ne la ce proiect ești interesat și ce vrei să afli despre protecția avansului tău."
-                                            ></textarea>
-                                        </div>
-
-                                        <div className="col-md-12 text-center">
-                                            <div className="loading">Se trimite...</div>
-                                            <div className="error-message"></div>
-                                            <div className="sent-message">
-                                                Mesajul tău a fost trimis. Îți mulțumim!
-                                            </div>
-
-                                            <button type="submit">Trimite solicitarea</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <ContactFormSection
+                    title="Contact"
+                    titlePrefix="Vrei să înțelegi"
+                    titleHighlight="cum îți sunt protejați banii?"
+                    infoItems={[
+                        {
+                            icon: "bi-person-heart",
+                            title: "Pentru cine este",
+                            text: "Cumpărători care rezervă sau achiziționează locuințe în faza de proiect sau în timpul construcției.",
+                            delay: 200,
+                        },
+                        {
+                            icon: "bi-envelope",
+                            title: "Email",
+                            text: "contact@fintermed.com",
+                            delay: 400,
+                        },
+                        {
+                            icon: "bi-shield-check",
+                            title: "Obiectiv",
+                            text: "Să cumperi o locuință cu mai multă încredere, control și protecție asupra banilor tăi.",
+                            delay: 500,
+                        },
+                    ]}
+                    buttonText="Trimite solicitarea"
+                    successText="Mesajul tău a fost trimis. Îți mulțumim!"
+                    errorText="A apărut o eroare. Te rugăm să încerci din nou."
+                    serviceId= "service_iqa1tay"
+                    templateId="template_7tzk2yg"
+                    publicKey="9rKI7F8Sb1XG3u16T"
+                    subjectDefaultValue="Solicitare informații protecție cumpărător FINTERMED"
+                    messagePlaceholder="Spune-ne la ce proiect ești interesat și ce vrei să afli despre protecția avansului tău."
+                />
             </main>
 
             <footer id="footer" className="footer">
