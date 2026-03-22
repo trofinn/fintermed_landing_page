@@ -175,7 +175,7 @@ export default function Cumparator() {
         {
             icon: "bi-search",
             title: "2. Noi verificăm",
-            text: "Platforma monitorizează progresul tehnic al blocului tău, iar dezvoltatorul raportează finalizarea fiecărei etape.",
+            text: "Dezvoltatorul raportează finalizarea etapelor, platforma validează progresul",
             delay: 200,
         },
         {
@@ -289,9 +289,12 @@ export default function Cumparator() {
                             <span>De la nesiguranța achiziției pe plan</span>{" "}
                             <span className="description-title">la control și protecție reală</span>
                         </p>
-                        <p className="section-subcopy mt-3">
+                        <p
+                            className="section-subcopy mt-3"
+                            style={{ fontSize: "25px" }}
+                        >
                             FINTERMED transformă incertitudinea achiziției pe plan în siguranța
-                            unei investiții protejate. Tu alegi casa, noi avem grijă de banii tăi.
+                            unei investiții protejate. Tu alegi locuința, noi avem grijă de banii tăi.
                         </p>
                     </div>
 
@@ -320,11 +323,7 @@ export default function Cumparator() {
                                         <i className="bi bi-shield-lock"></i>
                                     </div>
                                     <h3>FINTERMED: banii tăi, sub protecția ta</h3>
-                                    <p className="mt-3">
-                                        FINTERMED protejează avansul tău printr-un mecanism de escrow digital
-                                        și eliberează fondurile doar când dezvoltatorul demonstrează că etapa
-                                        promisă este finalizată.
-                                    </p>
+
                                     <ul className="mt-4">
                                         {buyerSolutions.map((item, index) => (
                                             <li key={item.strong} className={index < buyerSolutions.length - 1 ? "mb-3" : "mb-0"}>
@@ -333,6 +332,11 @@ export default function Cumparator() {
                                             </li>
                                         ))}
                                     </ul>
+                                    <p className="mt-3">
+                                        FINTERMED protejează avansul tău printr-un mecanism de escrow digital
+                                        și eliberează fondurile doar când dezvoltatorul demonstrează că etapa
+                                        promisă este finalizată.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -452,7 +456,7 @@ export default function Cumparator() {
                 <section id="cta" className="section light-background">
                     <div className="container" data-aos="fade-up">
                         <div className="cta-panel text-center">
-                            <h3>Tu alegi casa, noi avem grijă de banii tăi</h3>
+                            <h3>Tu alegi locuința, noi avem grijă de banii tăi.</h3>
                             <p className="mb-0">
                                 Află cum te poate ajuta FINTERMED să cumperi mai sigur o locuință
                                 în stadiu de proiect.
@@ -497,52 +501,6 @@ export default function Cumparator() {
             </main>
 
             <footer id="footer" className="footer">
-                <div className="container footer-top">
-                    <div className="row gy-4">
-                        <div className="col-lg-5 col-md-6 footer-about">
-                            <a href="/cumparator" className="d-flex align-items-center text-decoration-none">
-                                <span className="sitename">FINTERMED</span>
-                            </a>
-                            <div className="footer-contact pt-3">
-                                <p>Protecție digitală pentru cumpărătorii de locuințe în faza de proiect</p>
-                                <p>
-                                    <strong>Email:</strong> <span>contact@fintermed.com</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-3 footer-links">
-                            <h4>Navigare</h4>
-                            <ul>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#hero">Acasă</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#about">Protecția ta</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#services">Servicii</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-4 col-md-12">
-                            <h4>Mesaj cheie</h4>
-                            <p>
-                                FINTERMED transformă achiziția unei locuințe pe plan dintr-un risc greu
-                                de controlat într-un proces mai sigur, mai transparent și mai predictibil.
-                            </p>
-                            <div className="social-links d-flex">
-                                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-                                    <i className="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div className="container copyright text-center mt-4">
                     <p>

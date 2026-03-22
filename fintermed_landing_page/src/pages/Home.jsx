@@ -1,6 +1,6 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
-
+import Logo from "../assets/img/logo.svg";
 export default function Home() {
     return (
         <div className="home-page">
@@ -12,7 +12,7 @@ export default function Home() {
                 <div className="branding d-flex align-items-center">
                     <div className="container position-relative d-flex align-items-center justify-content-between">
                         <a href="/" className="logo d-flex align-items-center">
-                            <img src="/assets/img/logo.svg" alt="FINTERMED Logo" />
+                            <img src={Logo}  alt="FINTERMED Logo" />
                             <h1 className="sitename">FINTERMED</h1>
                         </a>
                     </div>
@@ -23,11 +23,6 @@ export default function Home() {
                 <section className="selector-hero">
                     <div className="container">
                         <div className="selector-heading">
-                            <div className="selector-badge">
-                                <i className="bi bi-shield-check"></i>
-                                Alege experiența potrivită pentru tine
-                            </div>
-
                             <h1>
                                 Protecție financiară pentru <span>proiecte rezidențiale</span>
                             </h1>
@@ -37,6 +32,11 @@ export default function Home() {
                                 Selectează profilul tău și mergi direct către pagina creată special pentru
                                 nevoile tale.
                             </p>
+                            <div className="selector-badge mt-5">
+                                <i className="bi bi-shield-check"></i>
+                                Alege experiența potrivită pentru tine
+                            </div>
+
                         </div>
 
                         <div className="selector-grid">
@@ -55,7 +55,7 @@ export default function Home() {
                                                 </div>
                                             </div>
 
-                                            <h3>Sunt dezvoltator</h3>
+                                            <h3>Sunt dezvoltator imobiliar</h3>
 
                                             <p>
                                                 Vrei să accelerezi vânzările proiectelor rezidențiale, să securizezi
@@ -66,11 +66,11 @@ export default function Home() {
                                             <ul className="selector-list">
                                                 <li>
                                                     <i className="bi bi-check-circle-fill"></i>
-                                                    <span>Deblocarea vânzărilor „pe plan” prin escrow digital</span>
+                                                    <span>Accelerarea vânzărilor “pe plan” prin utilizarea unui mecanism de escrow</span>
                                                 </li>
                                                 <li>
                                                     <i className="bi bi-check-circle-fill"></i>
-                                                    <span>Acces etapizat la fonduri pe baza milestone-urilor validate</span>
+                                                    <span>Eliberarea progresivă a fondurilor în funcție de milestone-urile confirmate</span>
                                                 </li>
                                                 <li>
                                                     <i className="bi bi-check-circle-fill"></i>
@@ -83,7 +83,7 @@ export default function Home() {
                                             </ul>
 
                                             <Link to="/dezvoltator" className="selector-btn selector-btn-primary">
-                                                Intră ca dezvoltator
+                                                Accesează pagina
                                                 <i className="bi bi-arrow-right"></i>
                                             </Link>
                                         </div>
@@ -104,11 +104,10 @@ export default function Home() {
                                                 </div>
                                             </div>
 
-                                            <h3>Sunt cumpărător</h3>
+                                            <h3>Doresc să achiziționez o locuință</h3>
 
                                             <p>
-                                                Vrei să plătești în siguranță pentru noua ta casă și să știi că banii
-                                                tăi sunt protejați până când dezvoltatorul finalizează etapele promise.
+                                                Vrei să plătești în siguranță pentru noua ta rezidență și să știi că banii tăi sunt protejați până când dezvoltatorul finalizează etapele promise.
                                             </p>
 
                                             <ul className="selector-list">
@@ -118,7 +117,7 @@ export default function Home() {
                                                 </li>
                                                 <li>
                                                     <i className="bi bi-check-circle-fill"></i>
-                                                    <span>Plată doar după verificarea etapelor de construcție</span>
+                                                    <span>Deblocarea fondurilor după validarea etapelor de construcție</span>
                                                 </li>
                                                 <li>
                                                     <i className="bi bi-check-circle-fill"></i>
@@ -131,7 +130,7 @@ export default function Home() {
                                             </ul>
 
                                             <Link to="/cumparator" className="selector-btn selector-btn-secondary">
-                                                Intră ca cumpărător
+                                                Accesează pagina
                                                 <i className="bi bi-arrow-right"></i>
                                             </Link>
                                         </div>

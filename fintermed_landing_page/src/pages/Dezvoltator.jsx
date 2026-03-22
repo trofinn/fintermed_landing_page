@@ -54,7 +54,7 @@ export default function Dezvoltator() {
         {
             icon: "bi-file-earmark-check",
             title: "Conformitate integrată",
-            text: "Automatizezi cerințele de transparență, limitare a avansurilor și protecție a fondurilor.",
+            text: "Asiguri automat transparența, controlul avansurilor și protecția fondurilor.",
             delay: 300,
         },
         {
@@ -94,8 +94,8 @@ export default function Dezvoltator() {
             text: " cumpărătorii investesc în siguranță încă din faza de proiect, știind că fondurile sunt protejate și eliberate doar pe măsura execuției reale.",
         },
         {
-            strong: "Eficientizarea ciclului de numerar:",
-            text: " avansurile pot fi accesate etapizat imediat ce pragurile tehnice sunt validate.",
+            strong: "Eficientizarea cashflow-urilor:",
+            text: " acces progresiv la avansuri, pe măsura validării etapelor tehnice.",
         },
         {
             strong: "Flux de numerar predictibil:",
@@ -147,8 +147,8 @@ export default function Dezvoltator() {
         },
         {
             icon: "bi-person-check",
-            title: "Digital KYC & Compliance",
-            text: "Externalizezi birocrația: verificarea identității și a sursei fondurilor cumpărătorilor, în acord cu normele europene de conformitate.",
+            title: "Digitalizarea administrării",
+            text: "Un cont tehnic per proiect, cu toate fluxurile și documentele într-o singură interfață, pentru audit și raportare eficiente.",
             delay: 300,
         },
     ];
@@ -174,8 +174,8 @@ export default function Dezvoltator() {
         },
         {
             icon: "bi-patch-check",
-            title: "Expertiză certificată",
-            text: "Modelul de business este conceput cu rigoare de profesioniști cu experiență în Investment Banking și managementul riscului.",
+            title: "Conformitate certificată",
+            text: "Modelul de business este conceput în deplină aliniere cu cadrul legal din România și Europa, inclusiv Legea 209/2019 și 207/2025..",
             delay: 400,
         },
     ];
@@ -303,7 +303,10 @@ export default function Dezvoltator() {
                             <span>De la capital imobilizat</span>{" "}
                             <span className="description-title">la lichiditate garantată</span>
                         </p>
-                        <p className="section-subcopy mt-3">
+                        <p
+                            className="section-subcopy mt-3"
+                            style={{ fontSize: "25px" }}
+                        >
                             FINTERMED transformă conformitatea legală dintr-o barieră administrativă
                             într-un motor de vânzări și lichiditate.
                         </p>
@@ -316,7 +319,7 @@ export default function Dezvoltator() {
                                     <div className="icon">
                                         <i className="bi bi-exclamation-triangle"></i>
                                     </div>
-                                    <h3>Blocajele financiare ale unui șantier</h3>
+                                    <h3>Blocajele financiare ale unui șantier</h3><br></br>
                                     <ul className="mt-4">
                                         {problems.map((item, index) => (
                                             <li key={item.strong} className={index < problems.length - 1 ? "mb-3" : "mb-0"}>
@@ -334,11 +337,7 @@ export default function Dezvoltator() {
                                         <i className="bi bi-shield-lock"></i>
                                     </div>
                                     <h3>FINTERMED: deblocarea vânzărilor prin escrow digital</h3>
-                                    <p className="mt-3">
-                                        FINTERMED elimină barierele de încredere și transformă proiectele
-                                        rezidențiale în active lichide încă din faza de proiect, printr-un
-                                        mecanism digital de escrow, plăți etapizate și conformitate integrată.
-                                    </p>
+
                                     <ul className="mt-4">
                                         {solutions.map((item, index) => (
                                             <li key={item.strong} className={index < solutions.length - 1 ? "mb-3" : "mb-0"}>
@@ -347,6 +346,11 @@ export default function Dezvoltator() {
                                             </li>
                                         ))}
                                     </ul>
+                                    <p className="mt-3">
+                                        FINTERMED elimină barierele de încredere și transformă proiectele
+                                        rezidențiale în active lichide încă din faza de proiect, printr-un
+                                        mecanism digital de escrow, plăți etapizate și conformitate integrată.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -511,53 +515,6 @@ export default function Dezvoltator() {
             </main>
 
             <footer id="footer" className="footer">
-                <div className="container footer-top">
-                    <div className="row gy-4">
-                        <div className="col-lg-5 col-md-6 footer-about">
-                            <a href="/dezvoltator" className="d-flex align-items-center text-decoration-none">
-                                <span className="sitename">FINTERMED</span>
-                            </a>
-                            <div className="footer-contact pt-3">
-                                <p>Soluții digitale pentru deblocarea vânzărilor în proiecte rezidențiale</p>
-                                <p>
-                                    <strong>Email:</strong> <span>contact@fintermed.com</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 col-md-3 footer-links">
-                            <h4>Navigare</h4>
-                            <ul>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#hero">Acasă</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#about">Soluția</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#services">Servicii</a>
-                                </li>
-                                <li>
-                                    <i className="bi bi-chevron-right"></i> <a href="#contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-4 col-md-12">
-                            <h4>Mesaj cheie</h4>
-                            <p>
-                                FINTERMED transformă conformitatea legală dintr-o obligație operațională
-                                într-un instrument de încredere, vânzare și lichiditate pentru
-                                dezvoltatorii imobiliari.
-                            </p>
-                            <div className="social-links d-flex">
-                                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-                                    <i className="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div className="container copyright text-center mt-4">
                     <p>
