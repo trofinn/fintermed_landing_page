@@ -1958,3 +1958,198 @@ section,
 .starter-section {
     /* Add your styles here */
 }
+
+.saas-card {
+    border: 1px solid rgba(16, 110, 234, 0.08);
+    box-shadow:
+            0 10px 30px rgba(15, 23, 42, 0.06),
+            0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+.saas-card .card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.saas-card .card-icon {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    border-radius: 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.problem-card.saas-card .card-icon {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.16), rgba(220, 53, 69, 0.06));
+    color: #dc3545;
+}
+
+.solution-card.saas-card .card-icon {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.16), rgba(13, 110, 253, 0.06));
+    color: #0d6efd;
+}
+
+.saas-card .card-head-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.saas-card .card-intro {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+.saas-card .card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.saas-card .card-list li {
+    position: relative;
+    padding-left: 18px;
+    line-height: 1.65;
+}
+
+.saas-card .card-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0d6efd;
+    opacity: 0.8;
+}
+
+.problem-card.saas-card .card-list li::before {
+    background: #dc3545;
+}
+
+.saas-card .card-summary {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    color: #475569;
+    line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+    .saas-card .card-head {
+        gap: 12px;
+    }
+
+    .saas-card .card-head-content h3 {
+        font-size: 30px;
+    }
+
+    .saas-card .card-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 14px !important;
+    }
+}
+
+.card-head-inline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.card-head-inline h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* SaaS icon style */
+.benefit-card .card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+
+    background: linear-gradient(
+            135deg,
+            rgba(13, 110, 253, 0.15),
+            rgba(147, 197, 253, 0.2)
+    );
+
+    color: #0d6efd;
+}
+
+/* Optional hover polish */
+.benefit-card {
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Reuse same inline header */
+.card-head-inline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+/* Process icon slightly more "step-like" */
+.process-card .card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+
+    background: linear-gradient(
+            135deg,
+            rgba(13, 110, 253, 0.14),
+            rgba(147, 197, 253, 0.18)
+    );
+
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+/* Optional: step emphasis */
+.process-card {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* 🔥 Optional (very nice): step number badge */
+.process-card::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(13, 110, 253, 0.08);
+}

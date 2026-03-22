@@ -315,14 +315,24 @@ export default function Dezvoltator() {
                     <div className="container">
                         <div className="row gy-4 mb-5">
                             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                                <div className="problem-card">
-                                    <div className="icon">
-                                        <i className="bi bi-exclamation-triangle"></i>
+                                <div className="problem-card saas-card">
+                                    <div className="card-head">
+                                        <div className="icon card-icon">
+                                            <i className="bi bi-exclamation-triangle"></i>
+                                        </div>
+
+                                        <div className="card-head-content">
+                                            <h3>Blocajele financiare ale unui șantier</h3><br></br><br></br>
+
+                                        </div>
                                     </div>
-                                    <h3>Blocajele financiare ale unui șantier</h3><br></br>
-                                    <ul className="mt-4">
+
+                                    <ul className="card-list">
                                         {problems.map((item, index) => (
-                                            <li key={item.strong} className={index < problems.length - 1 ? "mb-3" : "mb-0"}>
+                                            <li
+                                                key={item.strong}
+                                                className={index < problems.length - 1 ? "mb-3" : "mb-0"}
+                                            >
                                                 <strong>{item.strong}</strong>
                                                 {item.text}
                                             </li>
@@ -332,21 +342,31 @@ export default function Dezvoltator() {
                             </div>
 
                             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                                <div className="solution-card">
-                                    <div className="icon">
-                                        <i className="bi bi-shield-lock"></i>
-                                    </div>
-                                    <h3>FINTERMED: deblocarea vânzărilor prin escrow digital</h3>
+                                <div className="solution-card saas-card">
+                                    <div className="card-head">
+                                        <div className="icon card-icon">
+                                            <i className="bi bi-shield-lock"></i>
+                                        </div>
 
-                                    <ul className="mt-4">
+                                        <div className="card-head-content">
+                                            <h3>Deblocarea vânzărilor prin escrow digital</h3>
+
+                                        </div>
+                                    </div>
+
+                                    <ul className="card-list">
                                         {solutions.map((item, index) => (
-                                            <li key={item.strong} className={index < solutions.length - 1 ? "mb-3" : "mb-0"}>
+                                            <li
+                                                key={item.strong}
+                                                className={index < solutions.length - 1 ? "mb-3" : "mb-0"}
+                                            >
                                                 <strong>{item.strong}</strong>
                                                 {item.text}
                                             </li>
                                         ))}
                                     </ul>
-                                    <p className="mt-3">
+
+                                    <p className="card-summary">
                                         FINTERMED elimină barierele de încredere și transformă proiectele
                                         rezidențiale în active lichide încă din faza de proiect, printr-un
                                         mecanism digital de escrow, plăți etapizate și conformitate integrată.
@@ -423,12 +443,20 @@ export default function Dezvoltator() {
                                     data-aos="fade-up"
                                     data-aos-delay={item.delay}
                                 >
-                                    <div className="benefit-card">
-                                        <div className="icon">
-                                            <i className={`bi ${item.icon}`}></i>
+                                    <div className="benefit-card saas-card">
+
+                                        {/* Header: icon + title */}
+                                        <div className="card-head-inline">
+                                            <div className="icon card-icon">
+                                                <i className={`bi ${item.icon}`}></i>
+                                            </div>
+
+                                            <h3 className="mb-0">{item.title}</h3>
                                         </div>
-                                        <h3>{item.title}</h3>
+
+                                        {/* Content */}
                                         <p>{item.text}</p>
+
                                     </div>
                                 </div>
                             ))}
@@ -454,12 +482,20 @@ export default function Dezvoltator() {
                                     data-aos="fade-up"
                                     data-aos-delay={item.delay}
                                 >
-                                    <div className="process-card">
-                                        <div className="icon">
-                                            <i className={`bi ${item.icon}`}></i>
+                                    <div className="process-card saas-card">
+
+                                        {/* Header: icon + title */}
+                                        <div className="card-head-inline">
+                                            <div className="icon card-icon">
+                                                <i className={`bi ${item.icon}`}></i>
+                                            </div>
+
+                                            <h3 className="mb-0">{item.title}</h3>
                                         </div>
-                                        <h3>{item.title}</h3>
+
+                                        {/* Content */}
                                         <p>{item.text}</p>
+
                                     </div>
                                 </div>
                             ))}
